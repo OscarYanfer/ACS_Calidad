@@ -1,0 +1,36 @@
+[
+
+    {
+        "usuario": "luizarnoldch@gmail.com",
+        "nombres": "luiz arnold",
+        "apellidos": "chavez burgos",
+        "contrasena": "arnold"
+    },
+    {
+        "usuario": "luizarnold@gmail.com",
+        "nombres": "luiz",
+        "apellidos": "chavez",
+        "contrasena": "arnold"
+    },
+    {
+        "usuario": "luiz@gmail.com",
+        "nombres": "arnold",
+        "apellidos": "burgos",
+        "contrasena": "arnold"
+    },
+
+
+    {
+        "usuario": "luizarnoldch@gmail.com",
+        "contrasena": "arnold",
+        "contrasena2": "arnold"
+    },
+    {
+        "usuario": "luizarnold@gmail.com",
+        "contrasena": "arnold",
+        "contrasena2": "arnold"
+    }
+
+
+
+]
