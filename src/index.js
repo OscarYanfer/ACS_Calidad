@@ -8,6 +8,11 @@ const flash = require('connect-flash'); //importar libreria para enviar mensajes
 const MySQLStore = require('express-mysql-session')(session); //guardar la sesiones en mysql
 const { database } = require('./keys'); //importar la base de datos del archivo keys
 
+//Import Routes 
+const RutaIndex = require('./routes/index.routes');
+const RutaAuth = require('./routes/autenticacion.routes');
+const RutaUsuario = require('./routes/usuario.routes');
+
 //Inicializations
 const app = express();
 require('./lib/passport');
@@ -55,8 +60,6 @@ app.use((req, res, next) => {
 app.use(RutaIndex); //muestra el archivo existente en la carpeta routes con su contenido
 app.use(RutaAuth);
 app.use(RutaUsuario);
-app.use(RutaCodigo);
-//app.use('/trabajo', require('./routes/trabajos'));
 
 //Use Public Elementes
 app.use(express.static(path.join(__dirname, 'public')));
