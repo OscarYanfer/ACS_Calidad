@@ -4,7 +4,7 @@ module.exports = {
     database: {
         host: 'localhost',
         user: 'root',
-        password: 'FisiCalidad',
-        database: 'algorum'
+        password: 'Patatas123',
+        database: 'aseguramiento_calidad'
     }
 };
