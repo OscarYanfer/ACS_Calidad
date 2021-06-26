@@ -5,8 +5,11 @@ Aseguramiento de la Calidad del Software de la Landing Page de la empresa PCS Or
 ## Integrantes
 
 Chavez Burgos, Luiz Arnold (19200250)
+
 Romero Angeles, Luis Alfredo Felix (19200317)
+
 Zafra Moran, Rolando Jesus (19200262)
+
 Zarate Villar, Jhennyfer Nayeli (19200248)
 
 
