@@ -2,7 +2,8 @@ const express = require('express');
 const pool = require('../database');
 
 usuarioGet = async(req, res) => {
-    res.render('usuario/perfil');
+    const table = await pool.query("SELECT * FROM contact_datas");
+    res.render('usuario/perfil', { table });
     return next();
 }
 

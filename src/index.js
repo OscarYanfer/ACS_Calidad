@@ -19,7 +19,7 @@ require('./lib/passport');
 
 
 //Settings Handlebars
-app.set('port', process.env.PORT || 5500);
+app.set('port', process.env.PORT || 5600);
 app.set('views', path.join(__dirname, 'views')); //mostrar donde se encuentra views
 app.engine('.hbs', exphbs({ //configuración para usar handlebars
     defaultLayout: 'main', //función principan de handlebars

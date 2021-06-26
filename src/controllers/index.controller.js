@@ -2,6 +2,22 @@ const express = require('express');
 const pool = require('../database');
 
 index = async(req, res) => {
+    const {
+        full_name,
+        company_name,
+        phone_number,
+        email
+    } = req.body;
+
+    const newU = {
+        full_name,
+        company_name,
+        phone_number,
+        email
+    }
+
+    await pool.query("INSERT INTO contact_datas SET ?", [newU]);
+
     res.render('index/index');
     return next();
 }
