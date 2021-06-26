@@ -3,11 +3,14 @@ const pool = require('../database');
 
 index = async(req, res) => {
     const {
-        full_name,
+        firstname,
+        secondname,
         company_name,
         phone_number,
         email
     } = req.body;
+
+    const full_name = firstname + secondname;
 
     const newU = {
         full_name,
