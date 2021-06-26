@@ -1,7 +1,6 @@
 
 <h1 align="center"> PCS Orange: Mejora del servicio de información de la empresa</h1>
 <p align="center"> Documentación técnica y del producto software</p>
-<p align="center"><img src="https://www.webdevelopersnotes.com/wp-content/uploads/create-a-simple-home-page.png"/></p> 
 
 
 # Curso
