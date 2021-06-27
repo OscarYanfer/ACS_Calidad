@@ -9,4 +9,4 @@ esto debe ser una tabla
 
 ## Uso
 
-Puede correr el proyecto hacienod click [aqui](https://petsworkrolando.herokuapp.com/).
+Puede correr el proyecto hacienod click [aqui](https://pruebasrolando.herokuapp.com/).
