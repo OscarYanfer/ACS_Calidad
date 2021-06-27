@@ -1,6 +1,4 @@
-[
-
-    {
+[{
         "usuario": "luizarnoldch@gmail.com",
         "nombres": "luiz arnold",
         "apellidos": "chavez burgos",
@@ -30,7 +28,4 @@
         "contrasena": "arnold",
         "contrasena2": "arnold"
     }
-
-
-
 ]
