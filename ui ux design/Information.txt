@@ -1,0 +1,9 @@
+¡Hola
+En esta carpeta encontrarás los siguientes archivos:
+- PCS Orange.fig
+	Debes importarlo en Figma. Debes visualizar 3 páginas: Información General, prototipo Landing Page y Administrador
+- Administrador-Iniciar-Sesión.pdf
+- Administrador-Interfaz.pdf
+- Landing Page - EN
+- Landing Page - ES
+
