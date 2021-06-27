@@ -28,7 +28,7 @@ Rget = async(req, res) => {
     */
 
     for (i = 0; i < admin.length; i++) {
-        const row = await pool.query('SELECT * FROM PCSO_users WHERE username = ?', [admin[i].username]);
+        const row = await pool.query('SELECT * FROM pcso_users WHERE username = ?', [admin[i].username]);
         if (row.length > 0) {
             continue;
         } else {
