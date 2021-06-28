@@ -38,18 +38,56 @@
 		<script>
 			$("#delete").click(function(){
 				Swal.fire({
-					html: `<p style="color: white">La solicitud se eliminó correctamente.</p>`,
-					icon: 'success',
-					confirmButtonColor: '#4e6672',
+					html: `<p style="color: white">¿Desea eliminar la solicitud?</p>`,
 					background: '#4e6672',
+
+					showCancelButton: true,
+					confirmButtonColor: '#3085d6',
+					cancelButtonColor: '#d33',
+					confirmButtonText: 'Si',
+					cancelButtonText: 'No'
+					}).then((result) => {
+					if (result.isConfirmed) {
+						Swal.fire({
+							icon: 'success',
+							html: `<p style="color: white">La solicitud se eliminó correctamente.</p>`,
+							confirmButtonColor: '#4e6672',
+							background: '#4e6672',
+						});
+					}
 				});
 			});
 
 			$("#check").click(function(){
 				Swal.fire({
-					html: `<p style="color: white">Pronto nos estaremos contactando contigo. Gracias por la preferencia.</p>`,
-					confirmButtonColor: '#4e6672',
+					html: `<p style="color: white">¿Ha contactado al solicitante?</p>`,
 					background: '#4e6672',
+
+					showCancelButton: true,
+					confirmButtonColor: '#3085d6',
+					cancelButtonColor: '#d33',
+					confirmButtonText: 'Si',
+					cancelButtonText: 'No'
+					}).then((result) => {
+					if (result.isConfirmed) {
+						Swal.fire({
+							html: `<p style="color: white">Ingresa la fecha en la que se contactó al solicitante:</p>`,
+							input: `text`,
+							confirmButtonColor: '#4e6672',
+							confirmButtonText: 'Listo',
+							background: '#4e6672',
+
+						}).then((result) => {
+							if (result.isConfirmed) {
+								Swal.fire({
+									icon: 'success',
+									html: `<p style="color: white">Se hicieron los cambios correctamente.</p>`,
+									confirmButtonColor: '#4e6672',
+									background: '#4e6672',
+								});
+							}
+						});
+					}
 				});
 			});
 		</script>

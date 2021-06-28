@@ -43,7 +43,7 @@
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#{{id}}" aria-expanded="true">
                                         <div class="d-md-flex justify-content-between text-center">
                                             <p>{{full_name}}</p>
                                             <p>Correo de solicitud enviado</p>
@@ -54,7 +54,7 @@
                                 </h2>
                             </div>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div id="{{id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-12 col-md">
@@ -72,8 +72,8 @@
                                         </div>
                                         <div class="col-12 col-md text-center">
                                             <p>Acciones</p>
-                                            <a id="delete" href=""><img src="/images/delete_admin.png" alt="" class="d-inline"></a>
-                                            <a id="check" href=""><img src="/images/check_admin.png" alt="" class="d-inline"></a>
+                                            <abotton id="delete" href=""><img src="/images/delete_admin.png" alt="" class="d-inline"></abotton>
+                                            <botton id="check" href=""><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
                                         </div>
                                     </div>
                                 </div>
@@ -88,12 +88,20 @@
                 <nav>
                     <ul class="pagination">
                         <li class="page-item"><a class="page-link" href="#">Atras</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        {{!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li> --}}
                         <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
                     </ul>
                 </nav>
+
+
+            {{!-- ELIMINAME --}}
+                {{!-- <div class="col-12 col-md text-center">
+                                            <p>Acciones</p>
+                                            <botton id="delete" href=""><img src="/images/delete_admin.png" alt="" class="d-inline"></botton>
+                                            <botton id="check" href=""><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
+                                        </div> --}}
             </div>
         </div>
     </div>
