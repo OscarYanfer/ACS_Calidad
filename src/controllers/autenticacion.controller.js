@@ -1,5 +1,6 @@
 const passport = require('passport');
 const helpers = require('../lib/helpers');
+const pool = require('../database');
 
 Rget = async(req, res) => {
     //res.render('auten/registro');
@@ -9,10 +10,11 @@ Rget = async(req, res) => {
         password: "FISI2021"
     };
 
-    admin.password = await helpers.encryptPassword(password);
+
+    //admin.password = await helpers.encryptPassword(admin.password);
 
     await pool.query('INSERT INTO pcso_admin SET ?', [admin]);
-
+    res.redirect('/admin');
     return next();
 }
 
@@ -28,16 +30,38 @@ Rpost = async(req, res) => {
 }
 
 Iget = async(req, res) => {
-    res.render('auten/signin');
-    return next();
+    const admin = await pool.query('SELECT * FROM pcso_admin');
+    res.render('auten/signin', { admin });
+    //return next();
 }
 
+
 Ipost = async(req, res, next) => {
+    const { username, password } = req.body;
+
+
+
+    const rows = await pool.query('SELECT * FROM pcso_admin WHERE username = ?', [username]);
+    if (rows.length > 0) {
+        const user = rows[0];
+
+        const validPassword = password == user.password;
+
+        if (validPassword) {
+            res.redirect('/admin/list');
+        } else {
+            res.redirect('/admin');
+        }
+    }
+
+
+    /*
     passport.authenticate('local.signin', {
         successRedirect: '/admin/list',
         failureRedirect: '/admin',
         failureFlash: true
     })(req, res, next);
+    */
 }
 
 Out = async(req, res, next) => {
