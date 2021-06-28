@@ -4,10 +4,10 @@ const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
 const Perfil = require('../controllers/usuario.controller')
 
-router.get('/admin/list', isLoggedIn, Perfil.usuarioGet);
+router.get('/admin/list', Perfil.usuarioGet);
 
 
-router.get('/admin/update/:id', isLoggedIn, Perfil.editarGet);
+router.get('/admin/update/:id', Perfil.editarGet);
 
 /*
 router.post('/admin/update/:id', isLoggedIn, Perfil.editarPost);
@@ -15,6 +15,6 @@ router.post('/admin/update/:id', isLoggedIn, Perfil.editarPost);
 router.post('/admin/user/:id', isLoggedIn, Perfil.usuarioPost);
 */
 
-router.get('/admin/delete/:id', isLoggedIn, Perfil.eliminar);
+router.get('/admin/delete/:id', Perfil.eliminar);
 
 module.exports = router;
