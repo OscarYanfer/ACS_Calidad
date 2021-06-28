@@ -3,7 +3,18 @@
         <a class="navbar-brand" href="/">
             <img src="images/logo.svg" width="40" height="40" alt="PCS Logo">
         </a>
-        
+        {{#if user}}
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <span class="navbar-text">Bienvenido, {admin.user}</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/out">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        {{/if}}
     </div>
 </nav>
 
@@ -14,7 +25,7 @@
                 <div class="card text-center py-5" style="width: 80%; height: 80%; background-color: white; margin: 0 auto">
                     <div class="card-body ">
                         <img src="images/logo.svg" alt="" class="mb-4">
-                        <form action="">
+                        <form action="/admin" method="POST">
                             <div class="col-12 col-md-4 offset-md-4">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="user" placeholder="USUARIO">
