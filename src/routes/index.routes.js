@@ -3,7 +3,13 @@ const router = express.Router();
 const pool = require('../database');
 const Index = require('../controllers/index.controller')
 
-router.get('/', Index.indexENGet);
+router.get('/en', Index.indexENGet);
+
+router.post('/en', Index.indexENPost);
+
+router.get('/es', Index.indexESGet);
+
+router.post('/es', Index.indexESPost);
 
 /*
 router.post('/', Index.indexPost);
