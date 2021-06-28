@@ -72,14 +72,16 @@ indexESPost = async(req, res) => {
         res.render('error');
         return next();
     }
-    */
+*/
 
 module.exports = {
     indexENGet,
     indexENPost,
     indexESGet,
-    indexESPost,
+    indexESPost
+    /*
     nosotros,
     info,
     error
+    */
 };

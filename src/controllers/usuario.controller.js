@@ -43,4 +43,4 @@ eliminar = async(req, res) => {
     return next();
 }
 
-module.exports = { usuarioGet, usuarioPost, editarGet, editarPost, eliminar };
+module.exports = { usuarioGet /*,usuarioPost*/ , editarGet, /*editarPost,*/ eliminar };
