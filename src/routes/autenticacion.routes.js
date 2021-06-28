@@ -4,14 +4,14 @@ const passport = require('passport');
 const { isLoggedIn, isNotLoggedIn } = require('../lib/auth');
 const Auth = require('../controllers/autenticacion.controller')
 
-router.get('/registro', isNotLoggedIn, Auth.Rget);
+router.get('/signup', isNotLoggedIn, Auth.Rget);
 
-router.post('/registro', isNotLoggedIn, Auth.Rpost);
+//router.post('/registro', isNotLoggedIn, Auth.Rpost);
 
-router.get('/ingreso', isNotLoggedIn, Auth.Iget);
+router.get('/signin', isNotLoggedIn, Auth.Iget);
 
-router.post('/ingreso', isNotLoggedIn, Auth.Ipost);
+router.post('/signin', isNotLoggedIn, Auth.Ipost);
 
-router.get('/salir', isLoggedIn, Auth.Out);
+router.get('/out', isLoggedIn, Auth.Out);
 
 module.exports = router;
