@@ -35,42 +35,50 @@ indexESGet = async(req, res) => {
 }
 
 indexESPost = async(req, res) => {
-        const {
-            firstname,
-            lastname,
-            company_name,
-            phone_number,
-            email
-        } = req.body;
+    const {
+        firstname,
+        lastname,
+        company_name,
+        phone_number,
+        email
+    } = req.body;
 
-        var full_name = firstname + lastname;
+    var full_name = firstname + lastname;
 
-        const newU = {
-            full_name,
-            company_name,
-            phone_number,
-            email
-        };
-        await pool.query('INSERT INTO pcso_applicants set ?', [newU]);
-        res.redirect('index/index');
-        return next();
-    }
-    /*
-    nosotros = async(req, res) => {
-        res.render('nosotros');
-        return next();
-    }
+    const newU = {
+        full_name,
+        company_name,
+        phone_number,
+        email
+    };
+    await pool.query('INSERT INTO pcso_applicants set ?', [newU]);
+    res.redirect('index/index');
+    return next();
+}
 
-    info = async(req, res) => {
-        res.render('info');
-        return next();
-    }
 
-    error = async(req, res) => {
-        res.render('error');
-        return next();
-    }
-    */
+
+
+
+
+
+
+/*
+nosotros = async(req, res) => {
+    res.render('nosotros');
+    return next();
+}
+
+info = async(req, res) => {
+    res.render('info');
+    return next();
+}
+
+error = async(req, res) => {
+    res.render('error');
+    return next();
+}
+*/
 
 module.exports = {
     indexENGet,
