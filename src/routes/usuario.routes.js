@@ -6,11 +6,15 @@ const Perfil = require('../controllers/usuario.controller')
 
 router.get('/admin', isLoggedIn, Perfil.usuarioGet);
 
-router.post('/admin/user/:id', isLoggedIn, Perfil.usuarioPost);
+
 
 router.get('/admin/update/:id', isLoggedIn, Perfil.editarGet);
 
+/*
 router.post('/admin/update/:id', isLoggedIn, Perfil.editarPost);
+
+router.post('/admin/user/:id', isLoggedIn, Perfil.usuarioPost);
+*/
 
 router.get('/admin/delete/:id', isLoggedIn, Perfil.eliminar);
 
