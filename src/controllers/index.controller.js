@@ -23,7 +23,7 @@ indexPost = async(req, res) => {
         phone_number,
         email
     };
-    await pool.query('INSERT INTO contact_datas set ?', [newU]);
+    await pool.query('INSERT INTO pcso_applicants set ?', [newU]);
     res.redirect('index/index');
     return next();
 }

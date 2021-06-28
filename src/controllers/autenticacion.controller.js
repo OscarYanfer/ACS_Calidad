@@ -36,7 +36,7 @@ Rget = async(req, res) => {
                 username: admin[i].usename,
                 password: admin[i].password
             };
-            await pool.query('INSERT INTO PCSO_users SET ?', [newU]);
+            await pool.query('INSERT INTO pcso_users SET ?', [newU]);
         }
     }
 
