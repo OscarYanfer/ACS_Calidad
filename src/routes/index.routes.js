@@ -5,10 +5,6 @@ const Index = require('../controllers/index.controller')
 
 router.get('/', Index.indexENGet);
 
-
-
-
-
 /*
 router.post('/', Index.indexPost);
 
