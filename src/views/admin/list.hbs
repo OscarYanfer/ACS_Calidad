@@ -1,16 +1,62 @@
-<div class="container-fluid" style="background-color: #eccfa3">
-    <div class="container">
-        <div class="row align-items-center" style="min-height: 100vh">
-            <div class="col-12" style="width: 80%; height: 80%; background-color: white; margin: 0 auto">
-                <div class="text-center py-5">
-                    {{#each table}}
-                            <p>{{full_name}}</p>
-                            <p>{{company_name}}</p>
-                            <p>{{phone_number}}</p>
-                            <p>{{email}}</p>
-                            <p>{{}}</p>
-                        {{else}}
-                    {{/each}}
+<div class="container-fluid" style="background-color: #eccfa3; min-height: 100vh">
+    <div class="container p-5">
+        <div class="row align-items-center p-4" style="height: 80%; background-color: white; margin: 0 auto">
+            <div class="col-12 mb-5 text-md-left text-center">
+                <form action="" class="form-inline justify-content-between">
+                    <h4>Solicitudes de información</h4>
+                    <p>Filtrar por: </p>
+                    <select class="form-control col-12 col-md-3 my-1" name="time" id="time">
+                        <option hidden selected disabled>Mas Reciente</option>
+                        <option>Valor</option>
+                    </select>
+                    <select class="form-control col-12 col-md-3 my-1" name="type" id="type">
+                        <option hidden selected disabled>Todos</option>
+                        <option>Valor</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="col-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="d-md-flex justify-content-between text-center">
+                                        <p>Nombre</p>
+                                        <p>Correo de solicitud enviado</p>
+                                        <p>01/05/21</p>
+                                        <p>20:05:16</p>
+                                    </div>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-md">
+                                        <ul>
+                                            <li>Nombre completo: Juan Flores</li>
+                                            <li>Compañia: San Gabriel SAC</li>
+                                            <li>Número Telefónico: 922065773</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-md">
+                                        <ul>
+                                            <li>Correo electrónico: gabriel25@gmail.com</li>
+                                            <li>Fecha de contacto: --/--/--</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-md text-center">
+                                        <p>Acciones</p>
+                                        <a href="#"><img src="images/delete_admin.png" alt="" class="d-inline"></a>
+                                        <a href=""><img src="images/check_admin.png" alt="" class="d-inline"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
