@@ -24,13 +24,13 @@ indexENPost = async(req, res) => {
         email
     };
     await pool.query('INSERT INTO pcso_applicants set ?', [newU]);
-    res.redirect('index/index');
+    res.redirect('/index/index');
     return next();
 }
 
 
 indexESGet = async(req, res) => {
-    res.render('index/index');
+    res.render('index/index-spanish');
     return next();
 }
 
@@ -52,7 +52,7 @@ indexESPost = async(req, res) => {
         email
     };
     await pool.query('INSERT INTO pcso_applicants set ?', [newU]);
-    res.redirect('index/index');
+    res.redirect('/index/index-spanish');
     return next();
 }
 
