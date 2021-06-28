@@ -1,12 +1,12 @@
 const express = require('express');
 const pool = require('../database');
 
-indexGet = async(req, res) => {
+indexENGet = async(req, res) => {
     res.render('index/index');
     return next();
 }
 
-indexPost = async(req, res) => {
+indexENPost = async(req, res) => {
     const {
         firstname,
         lastname,
@@ -28,6 +28,7 @@ indexPost = async(req, res) => {
     return next();
 }
 
+
 /*
 nosotros = async(req, res) => {
     res.render('nosotros');
@@ -46,8 +47,10 @@ error = async(req, res) => {
 */
 
 module.exports = {
-    indexGet,
-    indexPost,
+    indexENGet,
+    indexENPost,
+    indexESGet,
+    indexESPost,
     nosotros,
     info,
     error
