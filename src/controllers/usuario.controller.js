@@ -3,7 +3,8 @@ const pool = require('../database');
 
 usuarioGet = async(req, res) => {
     const table = await pool.query("SELECT * FROM pcso_applicants");
-    res.render('admin/list', { table });
+    const Admin = await pool.query("SELECT * FROM pcso_admin");
+    res.render('admin/list', { table, Admin: admin[0] });
     return next();
 }
 
