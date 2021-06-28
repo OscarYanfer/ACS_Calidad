@@ -1,6 +1,11 @@
 const express = require('express');
 const pool = require('../database');
 
+indexGet = async(req, res) => {
+    res.redirect('/en');
+    return next();
+}
+
 indexENGet = async(req, res) => {
     res.render('index/index');
     return next();
@@ -75,6 +80,7 @@ indexESPost = async(req, res) => {
 */
 
 module.exports = {
+    indexGet,
     indexENGet,
     indexENPost,
     indexESGet,

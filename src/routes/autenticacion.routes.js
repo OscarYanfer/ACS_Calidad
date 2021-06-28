@@ -8,10 +8,10 @@ router.get('/signup', isNotLoggedIn, Auth.Rget);
 
 //router.post('/registro', isNotLoggedIn, Auth.Rpost);
 
-router.get('/signin', isNotLoggedIn, Auth.Iget);
+router.get('/admin', isNotLoggedIn, Auth.Iget);
 
-router.post('/signin', isNotLoggedIn, Auth.Ipost);
+router.post('/admin', isNotLoggedIn, Auth.Ipost);
 
-router.get('/out', isLoggedIn, Auth.Out);
+router.get('/out', isNotLoggedIn, Auth.Out);
 
 module.exports = router;

@@ -4,12 +4,12 @@ module.exports = {
         if (req.isAuthenticated()) {
             return next();
         }
-        return res.redirect('/ingreso');
+        return res.redirect('/admin');
     },
     isNotLoggedIn(req, res, next) {
         if (!req.isAuthenticated()) {
             return next();
         }
-        return res.redirect('/usuario');
+        return res.redirect('/admin');
     }
 };

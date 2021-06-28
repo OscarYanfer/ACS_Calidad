@@ -1,4 +1,5 @@
 const passport = require('passport');
+const helpers = require('../lib/helpers');
 
 Rget = async(req, res) => {
     //res.render('auten/registro');
@@ -41,7 +42,7 @@ Ipost = async(req, res, next) => {
 
 Out = async(req, res, next) => {
     req.logOut();
-    res.redirect('/');
+    res.redirect('/en');
 }
 
 module.exports = { Rget, Rpost, Iget, Ipost, Out };

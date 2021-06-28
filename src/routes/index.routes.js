@@ -11,6 +11,8 @@ router.get('/es', Index.indexESGet);
 
 router.post('/es', Index.indexESPost);
 
+router.get('/', Index.indexGet);
+
 /*
 router.post('/', Index.indexPost);
 

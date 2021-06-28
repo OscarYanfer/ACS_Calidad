@@ -4,8 +4,7 @@ const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
 const Perfil = require('../controllers/usuario.controller')
 
-router.get('/admin', isLoggedIn, Perfil.usuarioGet);
-
+router.get('/admin/list', isLoggedIn, Perfil.usuarioGet);
 
 
 router.get('/admin/update/:id', isLoggedIn, Perfil.editarGet);
