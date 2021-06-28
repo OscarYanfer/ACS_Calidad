@@ -28,6 +28,7 @@ indexPost = async(req, res) => {
     return next();
 }
 
+/*
 nosotros = async(req, res) => {
     res.render('nosotros');
     return next();
@@ -42,7 +43,7 @@ error = async(req, res) => {
     res.render('error');
     return next();
 }
-
+*/
 
 module.exports = {
     indexGet,
