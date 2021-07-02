@@ -2,25 +2,20 @@ const express = require('express');
 const pool = require('../database');
 
 indexGet = async(req, res) => {
-    res.redirect('/en');
-    return next();
+    return res.redirect('/en');
 }
 
 indexENGet = async(req, res) => {
-    res.render('index/index');
-    return next();
+    return res.render('index/index');
 }
 
 indexENPost = async(req, res) => {
     const {
-        firstname,
-        lastname,
+        full_name,
         company_name,
         phone_number,
         email
     } = req.body;
-
-    var full_name = firstname + lastname;
 
     const newU = {
         full_name,
@@ -29,26 +24,21 @@ indexENPost = async(req, res) => {
         email
     };
     await pool.query('INSERT INTO pcso_applicants set ?', [newU]);
-    res.redirect('/index/index');
-    return next();
+    return res.redirect('/en');
 }
 
 
 indexESGet = async(req, res) => {
-    res.render('index/index-spanish');
-    return next();
+    return res.render('index/index-spanish');
 }
 
 indexESPost = async(req, res) => {
     const {
-        firstname,
-        lastname,
+        full_name,
         company_name,
         phone_number,
         email
     } = req.body;
-
-    var full_name = firstname + lastname;
 
     const newU = {
         full_name,
@@ -57,8 +47,7 @@ indexESPost = async(req, res) => {
         email
     };
     await pool.query('INSERT INTO pcso_applicants set ?', [newU]);
-    res.redirect('/index/index-spanish');
-    return next();
+    return res.redirect('/es');
 }
 
 
