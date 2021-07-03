@@ -10,12 +10,14 @@ Rget = async(req, res) => {
         password: "FISI2021"
     };
 
+    const Existe = await pool.query('SELECT * FROM pcso_admin WHERE username = ?', [admin.username]);
+    console.log(Existe.length);
+    if (Existe.length > 0) {} else {
+        admin.password = await helpers.encryptPassword(admin.password);
+        await pool.query('INSERT INTO pcso_admin SET ?', [admin]);
+    }
 
-    //admin.password = await helpers.encryptPassword(admin.password);
-
-    await pool.query('INSERT INTO pcso_admin SET ?', [admin]);
     res.redirect('/admin');
-    return next();
 }
 
 Rpost = async(req, res) => {
@@ -37,10 +39,9 @@ Iget = async(req, res) => {
 
 
 Ipost = async(req, res, next) => {
+    /*
     const { username, password } = req.body;
-
-
-
+    
     const rows = await pool.query('SELECT * FROM pcso_admin WHERE username = ?', [username]);
     if (rows.length > 0) {
         const user = rows[0];
@@ -53,15 +54,16 @@ Ipost = async(req, res, next) => {
             res.redirect('/admin');
         }
     }
+    */
 
 
-    /*
+
     passport.authenticate('local.signin', {
         successRedirect: '/admin/list',
         failureRedirect: '/admin',
         failureFlash: true
     })(req, res, next);
-    */
+
 }
 
 Out = async(req, res, next) => {
