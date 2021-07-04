@@ -27,12 +27,16 @@
                     <h4>Solicitudes de información</h4>
                     <p>Filtrar por: </p>
                     <select class="form-control col-12 col-md-3 my-1" name="time" id="time">
-                        <option hidden selected disabled>Mas Reciente</option>
-                        <option>Valor</option>
+                        <option hidden selected disabled>Más Reciente</option>
+                        <option>7 dias</option>
+                        <option>30 dias</option>
+                        <option>Más Reciente</option>
                     </select>
                     <select class="form-control col-12 col-md-3 my-1" name="type" id="type">
                         <option hidden selected disabled>Todos</option>
-                        <option>Valor</option>
+                        <option>Correo de solicitud enviado</option>
+                        <option>Usuario contactado</option>
+                        <option>Todos</option>
                     </select>
                 </form>
             </div>
@@ -43,7 +47,7 @@
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#{{id}}" aria-expanded="true">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#id_{{id}}" aria-expanded="true">
                                         <div class="d-md-flex justify-content-between text-center">
                                             <p>{{full_name}}</p>
                                             <p>Correo de solicitud enviado</p>
@@ -54,7 +58,7 @@
                                 </h2>
                             </div>
 
-                            <div id="{{id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div id="id_{{id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-12 col-md">
@@ -84,24 +88,14 @@
                     {{/each}}
                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-12 my-5">
                 <nav>
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Atras</a></li>
-                        {{!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li> --}}
-                        <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                        <li class="page-item"><a class="page-link text-dark" href="#">Atras</a></li>
+
+                        <li class="page-item"><a class="page-link text-dark" href="#">Siguiente</a></li>
                     </ul>
                 </nav>
-
-
-            {{!-- ELIMINAME --}}
-                {{!-- <div class="col-12 col-md text-center">
-                                            <p>Acciones</p>
-                                            <botton id="delete" href=""><img src="/images/delete_admin.png" alt="" class="d-inline"></botton>
-                                            <botton id="check" href=""><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
-                                        </div> --}}
             </div>
         </div>
     </div>
