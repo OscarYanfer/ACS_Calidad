@@ -21,7 +21,7 @@
 
 <div class="container-fluid" style="background-color: #eccfa3; min-height: 100vh">
     <div class="container p-5">
-        <div class="row align-items-center p-4" style="height: 80%; background-color: white; margin: 0 auto">
+        <div class="row align-items-center p-4" style="background-color: white; margin: 0 auto">
             <div class="col-12 mb-5 text-md-left text-center">
                 <form action="" class="form-inline justify-content-between">
                     <h4>Solicitudes de información</h4>
@@ -52,7 +52,7 @@
                                             <p>{{full_name}}</p>
                                             <p>Correo de solicitud enviado</p>
                                             <p>01/05/21</p>
-                                            <p>20:05:16</p>
+                                            <p>{{registred_at}}</p>
                                         </div>
                                     </button>
                                 </h2>
@@ -71,13 +71,13 @@
                                         <div class="col-12 col-md">
                                             <ul>
                                                 <li>Correo electrónico: {{email}}</li>
-                                                <li>Fecha de contacto: {{aviso.created_at}}</li>
+                                                <li>Fecha de contacto: NULL</li>
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md text-center">
                                             <p>Acciones</p>
-                                            <abotton id="delete" href=""><img src="/images/delete_admin.png" alt="" class="d-inline"></abotton>
-                                            <botton id="check" href=""><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
+                                            <botton class="delete" href=""><img src="/images/delete_admin.png" alt="" class="d-inline"></botton>
+                                            <botton class="check" href=""><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
                                         </div>
                                     </div>
                                 </div>

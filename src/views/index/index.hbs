@@ -219,7 +219,7 @@
 					<div class="col-12 col-md-6" style="background-color: #d8ad82">
 						<div class="card my-5" style="width: 80%; margin: 0 auto">
 							<div class="card-body">
-								<form action="/en" method="POST">
+								<form id="form" action="/en" method="POST">
 									<div class="form-group">
 										<input type="text" placeholder="Full Name e.g. Juan -Suarez" class="form-control" id="full_name" name="full_name"  required>
 									</div>
@@ -263,7 +263,7 @@
 		</footer>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script>
-			$("#submit").submit(function(){
+			$("#form").submit(function(){
 				Swal.fire({
 					html: `<p style="color: white">We will be contacting you soon. Thanks for the preference.</p>`,
 					confirmButtonColor: '#4e6672',
