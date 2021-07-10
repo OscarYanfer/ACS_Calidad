@@ -45,6 +45,17 @@ section {
 
 .btm-light:hover { color: white; text-decoration: none; }
 
+.language-secundary{
+    opacity: 0.5;
+}
+.language-secundary:hover, .language-primary:hover{
+    text-decoration: none;
+}
+.language-secundary:hover img, .language-primary:hover img{
+    transform: scale(1.2);
+    transition: transform 500ms;
+}
+
 .navbar {
     background-color: #ffffff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
