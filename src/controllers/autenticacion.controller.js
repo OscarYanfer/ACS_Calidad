@@ -11,7 +11,7 @@ Rget = async(req, res) => {
     };
 
     const Existe = await pool.query('SELECT * FROM pcso_admin WHERE username = ?', [admin.username]);
-    console.log(Existe.length);
+    //console.log(Existe.length);
     if (Existe.length > 0) {} else {
         admin.password = await helpers.encryptPassword(admin.password);
         await pool.query('INSERT INTO pcso_admin SET ?', [admin]);

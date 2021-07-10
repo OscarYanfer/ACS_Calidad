@@ -18,6 +18,10 @@ CREATE TABLE pcso_admin(
     username VARCHAR(255),
     password VARCHAR(255),
     ip_computer VARCHAR(255),
-    comunicate_at TIMESTAMP NOT NULL DEFAULT current_timestamp,
+    comunicate_at TIMESTAMP NOT NULL DEFAULT current_timestamp ,
     registred_at TIMESTAMP NOT NULL DEFAULT current_timestamp
+
+    -- reated_at_time TIME() NOT NULL DEFAULT DATE_FORMAT(NOW( ),"%H:%i:%S") ,
+    -- created_at_day DATE NOT NULL DEFAULT CURDATE() 
+
 );

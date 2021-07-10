@@ -23,7 +23,9 @@ indexENPost = async(req, res) => {
         phone_number,
         email
     };
+
     await pool.query('INSERT INTO pcso_applicants set ?', [newU]);
+    //await pool.query("INSERT INTO pcso_applicants values (" + full_name + ", " + company_name + "," + phone_number + "," + email + ",DATE_FORMAT(NOW(), '%H:%M:%S'),CURDATE()");
     return res.redirect('/en');
 }
 
@@ -47,6 +49,10 @@ indexESPost = async(req, res) => {
         email
     };
     await pool.query('INSERT INTO pcso_applicants set ?', [newU]);
+
+
+    //await pool.query('INSERT INTO pcso_applicants values (' + full_name + ',' + company_name + ',' + phone_number + ',' + email + ',' + 'DATE_FORMAT(NOW(), "%H:%i:%S")' + ',' + 'CURDATE()');
+    //await pool.query("INSERT INTO pcso_applicants values (" + full_name + ", " + company_name + "," + phone_number + "," + email + "," + DATE_FORMAT(NOW(), '%H:%i:%S') + ", " + CURDATE());
     return res.redirect('/es');
 }
 
