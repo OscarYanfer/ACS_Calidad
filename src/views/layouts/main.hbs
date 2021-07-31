@@ -48,6 +48,7 @@
 					cancelButtonText: 'No'
 					}).then((result) => {
 					if (result.isConfirmed) {
+						$(this).parent().parent().parent().parent().parent().remove();
 						Swal.fire({
 							icon: 'success',
 							html: `<p style="color: white">La solicitud se eliminó correctamente.</p>`,
