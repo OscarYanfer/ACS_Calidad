@@ -29,6 +29,8 @@ return next();
 
 editarGet = async(req, res) => {
     const { id } = req.params;
+    const usuario = await pool.query("SELECT * FROM pcso_applicants WHERE id=?",[id]);
+    console.log(req.body);
     res.render('admin/update');
     return next();
 }

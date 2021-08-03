@@ -21,6 +21,7 @@ indexENPost = async(req, res) => {
         full_name,
         company_name,
         phone_number,
+        id_states: 2,
         email
     };
 
@@ -46,6 +47,7 @@ indexESPost = async(req, res) => {
         full_name,
         company_name,
         phone_number,
+        id_states: 2,
         email
     };
     await pool.query('INSERT INTO pcso_applicants set ?', [newU]);

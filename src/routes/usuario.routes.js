@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
-const Perfil = require('../controllers/usuario.controller')
+const Perfil = require('../controllers/usuario.controller');
 
 router.get('/admin/list', Perfil.usuarioGet);
 

@@ -71,13 +71,13 @@
                                         <div class="col-12 col-md">
                                             <ul>
                                                 <li>Correo electrónico: {{email}}</li>
-                                                <li>Fecha de contacto: NULL</li>
+                                                <li>Fecha de contacto: {{timeago table.registred_at}}</li>
                                             </ul>
                                         </div>
                                         <div class="col-12 col-md text-center">
                                             <p>Acciones</p>
-                                            <botton class="delete" href=""><img src="/images/delete_admin.png" alt="" class="d-inline"></botton>
-                                            <botton class="check" href=""><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
+                                            <botton class="delete" href="/admin/delete/{{id}}"><img src="/images/delete_admin.png" alt="" class="d-inline"></botton>
+                                            <botton class="check" href="/admin/update/{{id}}"><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
                                         </div>
                                     </div>
                                 </div>
