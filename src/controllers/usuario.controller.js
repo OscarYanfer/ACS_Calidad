@@ -29,10 +29,16 @@ return next();
 
 editarGet = async(req, res) => {
     const { id } = req.params;
-    const usuario = await pool.query("SELECT * FROM pcso_applicants WHERE id=?",[id]);
-    console.log(req.body);
+    const {state} = req.body;
+    if (state === 1){
+        state = 2;
+    } else {
+        state = 1;
+    }
+    await pool.query("UPDATE pcso_applicants set state=? where id =?",[state,id]);
     res.render('admin/update');
     return next();
+    //UPDATE trabajos set estado = ? WHERE id = ?
 }
 
 /*
@@ -44,6 +50,7 @@ editarPost = async(req, res) => {
 */
 eliminar = async(req, res) => {
     const { id } = req.params;
+    await pool.query("DELETE FROM psso_applicants WHERE id=?",[id]);
     res.redirect('/admin/list');
     return next();
 }
