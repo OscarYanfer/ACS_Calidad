@@ -37,7 +37,6 @@ editarGet = async(req, res) => {
     }
     await pool.query("UPDATE pcso_applicants set state=? where id =?",[state,id]);
     res.render('admin/update');
-    return next();
     //UPDATE trabajos set estado = ? WHERE id = ?
 }
 
@@ -52,7 +51,6 @@ eliminar = async(req, res) => {
     const { id } = req.params;
     await pool.query("DELETE FROM pcso_applicants WHERE id=?",[id]);
     res.redirect('/admin/list');
-    return next();
 }
 
 module.exports = { usuarioGet /*,usuarioPost*/ , editarGet, /*editarPost,*/ eliminar };

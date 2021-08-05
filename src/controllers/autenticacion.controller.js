@@ -28,7 +28,6 @@ Rpost = async(req, res) => {
         failureFlash: true 
     }) 
     */
-    return next();
 }
 
 Iget = async(req, res) => {
