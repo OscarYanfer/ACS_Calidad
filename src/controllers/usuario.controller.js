@@ -50,7 +50,7 @@ editarPost = async(req, res) => {
 */
 eliminar = async(req, res) => {
     const { id } = req.params;
-    await pool.query("DELETE FROM psso_applicants WHERE id=?",[id]);
+    await pool.query("DELETE FROM pcso_applicants WHERE id=?",[id]);
     res.redirect('/admin/list');
     return next();
 }
