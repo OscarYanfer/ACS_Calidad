@@ -36,7 +36,7 @@
 
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script>
-			/*
+			
 			$(".delete").click(function(){
 				Swal.fire({
 					html: `<p style="color: white">¿Desea eliminar la solicitud?</p>`,
@@ -50,6 +50,10 @@
 					}).then((result) => {
 					if (result.isConfirmed) {
 						$(this).parent().parent().parent().parent().parent().remove();
+
+						var url = $(this).data('url');
+						window.open(url, "_self");
+
 						Swal.fire({
 							icon: 'success',
 							html: `<p style="color: white">La solicitud se eliminó correctamente.</p>`,
@@ -92,7 +96,7 @@
 					}
 				});
 			});
-			*/
+			
 		</script>
 		<script>
 			$(function () {

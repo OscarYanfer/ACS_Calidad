@@ -50,8 +50,6 @@
                                     <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#id_{{id}}" aria-expanded="true">
                                         <div class="d-md-flex justify-content-between text-center">
                                             <p class="text-truncate">{{full_name}}</p>
-                                            <p class="text-truncate">Correo de solicitud enviado</p>
-                                            <p>01/05/21</p>
                                             <p class="text-truncate">{{registred_at}}</p>
                                         </div>
                                     </button>
@@ -76,8 +74,8 @@
                                         </div>
                                         <div class="col-12 col-md text-center">
                                             <p>Acciones</p>
-                                            <botton class="delete" href="/admin/delete/{{id}}"><img src="/images/delete_admin.png" alt="" class="d-inline"></botton>
-                                            <botton class="check" href="/admin/update/{{id}}"><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
+                                            <botton class="delete" data-url="/admin/delete/{{id}}"><img src="/images/delete_admin.png" alt="" class="d-inline"></botton>
+                                            <botton class="check" data-url="/admin/update/{{id}}"><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
                                         </div>
                                     </div>
                                 </div>
