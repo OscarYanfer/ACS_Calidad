@@ -9,22 +9,24 @@ usuarioGet = async(req, res) => {
     //return next();
 }
 
-/*
-    usuarioPost = async(req, res) => {
-        
-                const { id_applicant } = req.params;
-                const { id_admin } = req.user;
 
-                newAfU = {
-                    id_applicant,
-                    id_admin
-                }
-                await pool.query('INSERT INTO pcso_admin_for_applicants SET ?', [newAfU]);
-        
-res.redirect('/admin/list');
+usuarioPost = async(req, res) => {
+    
+    console.log(req.body);
+    /*
+    const { id_applicant } = req.params;
+    const { id_admin } = req.user;
+
+    newAfU = {
+        id_applicant,
+        id_admin
+    }
+    await pool.query('INSERT INTO pcso_admin_for_applicants SET ?', [newAfU]);
+    */
+    res.redirect('/admin/list');
 return next();
 }
-*/
+
 
 
 editarGet = async(req, res) => {
@@ -53,4 +55,4 @@ eliminar = async(req, res) => {
     res.redirect('/admin/list');
 }
 
-module.exports = { usuarioGet /*,usuarioPost*/ , editarGet, /*editarPost,*/ eliminar };
+module.exports = { usuarioGet ,usuarioPost , editarGet, /*editarPost,*/ eliminar };

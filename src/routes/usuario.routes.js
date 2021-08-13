@@ -6,6 +6,8 @@ const Perfil = require('../controllers/usuario.controller');
 
 router.get('/admin/list', Perfil.usuarioGet);
 
+router.post('/admin/list', Perfil.usuarioPost);
+
 
 router.get('/admin/update/:id', Perfil.editarGet);
 
