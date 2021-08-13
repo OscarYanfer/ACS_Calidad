@@ -76,24 +76,7 @@
 					cancelButtonText: 'No'
 					}).then((result) => {
 					if (result.isConfirmed) {
-						Swal.fire({
-							html: `<p style="color: white">Ingresa la fecha en la que se contactó al solicitante (dd/mm/aa):</p>`,
-							input: `text`,
-							confirmButtonColor: '#4e6672',
-							confirmButtonText: 'Listo',
-							background: '#4e6672',
-							
-						}).then((result) => {
-							if (result.isConfirmed) {
-							
-
-								$.ajax({
-									type: "POST",
-									url: '/admin/list',
-									data: {"time": result.value},
-								});
-							}
-						});
+						Swal.fire('Datos guardados');
 					}
 				});
 			});
