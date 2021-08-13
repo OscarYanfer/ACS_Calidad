@@ -11,8 +11,9 @@ usuarioGet = async(req, res) => {
 
 
 usuarioPost = async(req, res) => {
-    
+    console.log(req.params);
     console.log(req.body);
+    console.log("usuario_post");
     /*
     const { id_applicant } = req.params;
     const { id_admin } = req.user;
@@ -24,7 +25,6 @@ usuarioPost = async(req, res) => {
     await pool.query('INSERT INTO pcso_admin_for_applicants SET ?', [newAfU]);
     */
     res.redirect('/admin/list');
-return next();
 }
 
 

@@ -9,7 +9,7 @@ router.get('/admin/list', Perfil.usuarioGet);
 router.post('/admin/list', Perfil.usuarioPost);
 
 
-router.get('/admin/update/:id', Perfil.editarGet);
+//router.get('/admin/update/:id', Perfil.usuarioPost);
 
 /*
 router.post('/admin/update/:id', isLoggedIn, Perfil.editarPost);

@@ -75,7 +75,9 @@
                                         <div class="col-12 col-md text-center">
                                             <p>Acciones</p>
                                             <botton class="delete" data-url="/admin/delete/{{id}}"><img src="/images/delete_admin.png" alt="" class="d-inline"></botton>
-                                            <botton class="check" data-url="/admin/update/{{id}}"><img src="/images/check_admin.png" alt="" class="d-inline"></botton>
+                                            <form action="/admin/list" method="POST">
+                                                <button type="submit" class="check" ><img src="/images/check_admin.png" alt="" class="d-inline"></button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
