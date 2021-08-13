@@ -85,12 +85,12 @@
 							
 						}).then((result) => {
 							if (result.isConfirmed) {
-								Swal.fire({
-									icon: 'success',
-									html: `<p style="color: white">Se hicieron los cambios correctamente.</p>`,
-									confirmButtonColor: '#4e6672',
-									background: '#4e6672',
-									post('/admin/list', {"time": result.value});
+							
+
+								$.ajax({
+									type: "POST",
+									url: '/admin/list',
+									data: {"time": result.value},
 								});
 							}
 						});
