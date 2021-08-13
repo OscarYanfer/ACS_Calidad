@@ -82,7 +82,7 @@
 							confirmButtonColor: '#4e6672',
 							confirmButtonText: 'Listo',
 							background: '#4e6672',
-
+							
 						}).then((result) => {
 							if (result.isConfirmed) {
 								Swal.fire({
@@ -90,6 +90,7 @@
 									html: `<p style="color: white">Se hicieron los cambios correctamente.</p>`,
 									confirmButtonColor: '#4e6672',
 									background: '#4e6672',
+									post('/admin/list', {"time": result.value});
 								});
 							}
 						});
